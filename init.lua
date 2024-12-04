@@ -84,8 +84,10 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
--- TRYING TO CHANGE THE COLORSCHEME
--- vim.cmd.colorscheme "slate"
+-- -- TRYING TO CHANGE THE COLORSCHEME
+-- vim.cmd.colorscheme 'gruvbox'
+-- -- You can configure highlights by doing something like:
+-- vim.cmd.hi 'Comment gui=none'
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
