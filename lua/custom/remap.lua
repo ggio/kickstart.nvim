@@ -1,6 +1,14 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- Open a horizontal split with a terminal with ~15% size
+vim.keymap.set(
+    'n',
+    '<leader><Tab>',
+    ':8split<Enter>:term<Enter>',
+    { desc = '[Tab] Open terminal in a new split' }
+)
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -19,16 +27,7 @@ vim.keymap.set(
 --
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set(
-    't',
-    '<Esc><Esc>',
-    '<C-\\><C-n>',
-    { desc = 'Exit terminal mode' }
-)
-
--- Set apenas Esc para sair do modo terminal
-vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
--- vim.cmd [[ tnoremap <Esc> <C-\><C-n> ]]
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
@@ -38,7 +37,6 @@ vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
---
 --  See `:help wincmd` for a list of all window commands
 vim.keymap.set(
     'n',

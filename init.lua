@@ -6,14 +6,14 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Lazy and plugins
+require 'custom.lazy_nvim'
+
 -- Minhas configurações
 require 'custom.settings'
 
 -- Atalhos de teclado
 require 'custom.remap'
-
--- Lazy and plugins
-require 'custom.lazy_nvim'
 
 -- Tab size
 vim.opt.tabstop = 8 -- Always 8 (see :h tabstop)
